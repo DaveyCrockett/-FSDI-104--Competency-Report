@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+    background-color: gray;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    background-color: #fcde67;
+    color: #030e12;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #5bccf6;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.sidenav a {
+    padding: 10px 8px 6px 16px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    color: #030e12;
+    margin-left: 20px;
+}
+
+.sidenav a:hover {
+    color: #fcde67;
+    border-left: #030e12 5px solid;
+    text-shadow: 2px 2px #030e12;
+}
+
+.main {
+    margin-left: 350px; /* Same as the width of the sidenav */
+    margin-right: 150px;
+    font-size: 16pt; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+.mainTitle {
+    margin-left: 160px;
+    padding: 0px 10px;
+    text-align: center;
+    font-size: 36pt;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mainTitle a {
+    text-decoration: none;
+    color: #030e12;
+}
+
+.mainTitle a:hover {
+    text-decoration: underline;
+    color: #5bccf6;
+    text-shadow: #030e12 2px 2px;
+}
+
+.welcomeMsg {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.imgContainer {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  
+.mainHusky {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.dayCare {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.groomingDog {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+.trainingDog {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.huskySearch {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5bccf6;
+    border-radius: 24px;
+}
+
+.imgContainer:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: #fcde67;
+    font-size: 36pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.mainText {
+    font-size: 16pt;
+    text-indent: 50px;
+    margin-bottom: 50px;
+    line-height: 24pt;
+}
+
+.employeeTable{
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    background-color: white;
+    color: gray;
+    box-shadow: #030e12 5px 5px;
+}
+.employeeTable th, td {
+    border-bottom: 2px solid black;
+    padding: 15px 50px 15px 50px;
+}
+
+.employeeTable .employeeRow:hover {
+    background-color: #5bccf6;
+    color:#fcde67;
+    cursor: pointer;
+}
+
+.registerTable {
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    background-color: white;
+    color: gray;
+    box-shadow: #030e12 5px 5px;
+}
+
+.registerTable th, td {
+    border-bottom: 2px solid black;
+    padding: 15px 25px 15px 25px;
+}
+
+.registerTable .petRow:hover {
+    background-color: #5bccf6;
+    color:#fcde67;
+    cursor: pointer;
+}
+
+.registeredPets {
+    text-align: center;
+}
+
+.registerForm {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.petInput {
+    font-size: 16pt;
+    padding: 5px;
+}
+
+.petSubmit {
+    border-radius: 12px;
+    background-color: #5bccf6;
+    font-size: 16pt;
+    padding: 5px;
+    border: none;
+    width: 50%;
+    grid-column: 2;
+    justify-self: end;
+}
+
+.petSubmit:hover {
+    box-shadow: 5px 5px #030e12;
+    width: 52%;
+    color: #fcde67;
+}
+
+.lowFooter {
+    text-align: right;
+    padding: 0px 10px;
+    margin-right: 160px;
+    margin-top: 150px;
+}
+
+.fa{
+    margin-right: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    border-radius: 12px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .searchTable {
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    background-color: white;
+    color: gray;
+    box-shadow: #030e12 5px 5px;
+}
+
+.searchTable th, td {
+    border-bottom: 2px solid black;
+    padding: 15px 25px 15px 25px;
+}
+
+.searchTable .petRow:hover {
+    background-color: #5bccf6;
+    color:#fcde67;
+    cursor: pointer;
+}
+
+.searchedPets {
+    text-align: center;
+}
+
+.searchBar {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+}
+.searchSubmit {
+    border-radius: 12px;
+    background-color: #5bccf6;
+    font-size: 16pt;
+    padding: 5px;
+    border: none;
+    width: 15%;
+}
+
+.searchSubmit:hover {
+    box-shadow: 5px 5px #030e12;
+    color: #fcde67;
+    width: 17%;
+}
+
+.delBtn {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.delBtn:hover {
+    background-color: red;
+    color: black;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 1440px){
+    .lowFooter {
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+   .main {
+       margin-left: 250px;
+       margin-right: 50px;
+   }
+
+   .registerForm{
+       width: 100%;
+   }
+
+   .registerTable th, td {
+    padding: 15px 15px 15px 15px;
+    font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .hideTxt {
+        display: none; 
+    }
+
+    .sidenav {
+        width: 75px;
+    }
+
+    .sidenav a {
+        padding: 0;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .mainTitle {
+        margin-left: 0;
+    }
+
+    .main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 690px;
+    }
+
+    .welcomeMsg {
+        margin-left: 75px;
+    }
+
+    .mainText {
+        margin-left: 75px;
+    }
+
+    .employeeTable {
+        margin-left: 75px;
+    }
+
+    .registerForm {
+        width: 80%;
+    }
+
+    .registerTable th, td {
+        padding: 15px 5px 15px 5px;
+    }
+}
